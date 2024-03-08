@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <title>My Google Maps</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <script type="module" src="./index.js"></script>
+    </head>
+    <body>
+        <h3 id="title">My Google Maps - 四大便利商店區域分佈</h3>        
+        <div id="container">
+            <div id="map"></div>
+            <div id="list">
+                <h4>查詢縣市</h4>
+                <select id="county" class="form-select" aria-label="Default select example">
+                    <option value='' selected disabled hidden>選擇縣市</option> 
+                </select>
+                <h4>查詢便利商店</h4>
+                <div class="btn-con">
+                    <button class="storebtn btn btn-primary" type="button" value="7-11">7-11</button>
+                    <button class="storebtn btn btn-primary" type="button" value="familymart">family</button>
+                    <button class="storebtn btn btn-primary" type="button" value="hi-life">hi-life</button>
+                    <button class="storebtn btn btn-primary" type="button" value="okmart">ok mart</button>
+                </div>
+                
+                <button id="gobtn" class="btn btn-primary" type="button" value="okmart">查詢</button>
+                
+                <p id="storeNum"></p>
+            </div>
+        </div>
+    
+        <!-- prettier-ignore -->
+        <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD9LqO94F7rz16uilFXujmcPe4kFSrMdg"></script> -->
+
+        <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script> -->
+
+        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+            ({key: "AIzaSyBD9LqO94F7rz16uilFXujmcPe4kFSrMdg", v: "beta"});</script>
+    </body>
+</html>
