@@ -4,3 +4,8 @@
 
 # 網址
 [點我觀看網頁](https://chiatung1010.github.io/ConvenienceStore_map/)
+
+## 使用技術
+* HTML
+* CSS
+* Google map API 串接
